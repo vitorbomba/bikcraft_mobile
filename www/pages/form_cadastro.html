@@ -1,0 +1,67 @@
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA1cK5CSs2snU7gK-h6SW3MiJYnrjyZKgs",
+        authDomain: "bomba-bikcraft.firebaseapp.com",
+        databaseURL: "https://bomba-bikcraft.firebaseio.com",
+        projectId: "bomba-bikcraft",
+        storageBucket: "bomba-bikcraft.appspot.com",
+        messagingSenderId: "527314157805"
+      };
+      firebase.initializeApp(config);
+</script>
+
+<div class="page" data-name="form">
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Voltar</span>
+        </a>
+      </div>
+      <div class="title">Cadastro</div>
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="block-title"></div>
+    <div class="list no-hairlines-md">
+      <ul>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Nome</div>
+              <div class="item-input-wrap">
+                <input type="text" placeholder="Seu nome"/>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">E-mail</div>
+              <div class="item-input-wrap">
+                <input type="email" placeholder="E-mail"/>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Senha</div>
+              <div class="item-input-wrap">
+                <input type="password" placeholder="Senha"/>
+              </div>
+            </div>
+          </div>
+        </li>
+      <p class="row">
+        <a href="#" class="col button button-big button-fill button-raised">Cadastrar</a>
+      </p>
+      </ul>
+    </div>
+  </div>
+</div>

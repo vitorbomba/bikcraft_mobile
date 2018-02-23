@@ -8,6 +8,18 @@ routes = [
     url: './pages/about.html',
   },
   {
+    path: '/login/',
+    url: './pages/login.html',
+  },
+  {
+    path: '/contato/',
+    url: './pages/form_contato.html',
+  },
+  {
+    path: '/cadastro/',
+    url: './pages/form_cadastro.html',
+  },
+  {
     path: '/catalog/',
     componentUrl: './pages/catalog.html',
   },
@@ -17,7 +29,7 @@ routes = [
   },
   {
     path: '/settings/',
-    url: './pages/settings.html',
+    url: './pages/login.html',
   },
   // Page Loaders & Router
   {
