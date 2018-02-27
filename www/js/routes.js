@@ -12,6 +12,14 @@ routes = [
     url: './pages/login.html',
   },
   {
+    path: '/sobre/',
+    url: './pages/sobre.html',
+  },
+  {
+    path: '/portfolio/',
+    url: './pages/portfolio.html',
+  },
+  {
     path: '/contato/',
     url: './pages/form_contato.html',
   },
@@ -21,7 +29,7 @@ routes = [
   },
   {
     path: '/catalog/',
-    componentUrl: './pages/catalog.html',
+    componentUrl: './pages/index.html',
   },
   {
     path: '/product/:id/',
@@ -29,7 +37,7 @@ routes = [
   },
   {
     path: '/settings/',
-    url: './pages/login.html',
+    url: './pages/settings.html',
   },
   // Page Loaders & Router
   {

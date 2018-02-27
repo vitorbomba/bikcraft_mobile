@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
 
     <link rel="stylesheet" href="css/styles.css"> -->
-
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="framework7/css/framework7.min.css">
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/app.css">
@@ -57,10 +57,13 @@
                 <div class="list links-list">
                     <ul>
                         <li>
-                          <a href="/login/" data-view=".view-main" class="panel-close">Login</a>
+                          <a href="#" class="login-screen-open" data-login-screen="#my-login-screen">Login</a>
                         </li>
                         <li>
                             <a href="/sobre/" data-view=".view-main" class="panel-close">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="/portfolio/" data-view=".view-main" class="panel-close">Portfólio</a>
                         </li>
                         <li>
                           <a href="/contato/" data-view=".view-main" class="panel-close">Contato</a>
@@ -78,7 +81,7 @@
           </div>
         </div>
         <!-- Right panel with reveal effect-->
-        <div class="panel panel-right panel-reveal theme-dark">
+       <!--  <div class="panel panel-right panel-reveal theme-dark">
           <div class="view">
             <div class="page">
               <div class="navbar">
@@ -91,7 +94,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
     
         <!-- Views/Tabs container -->
         <div class="views tabs ios-edges">
@@ -131,26 +134,26 @@
                       <i class="icon material-icons md-only">menu</i>
                     </a>
                   </div>
-                  <div class="title sliding">Home</div>
-                  <div class="right">
+                  <div class="title sliding">Bikcraft</div>
+                  <!-- <div class="right">
                     <a href="#" class="link icon-only panel-open" data-panel="right">
                       <i class="icon f7-icons ios-only">menu</i>
                       <i class="icon material-icons md-only">menu</i>
                     </a>
-                  </div>
+                  </div> -->        <!-- MENU DA DIREITA MENU DA DIREITA MENU DA DIREITA MENU DA DIREITA --> 
                 </div>
               </div>
     
               <!-- Scrollable page content-->
               <div class="page-content">
                 <div class="block block-strong">
-                  <p>This is an example of tabs-layout application. The main point of such tabbed layout is that each tab contains independent view with its own routing and navigation.</p>
-                  <p>Each tab/view may have different layout, different navbar type (dynamic, fixed or static) or without navbar like this tab.</p>
+                  <h1>Bicicletas feitas a mão</h1>
+                  <p>"Não tenha nada em sua casa que voce não considere útil ou acredita ser bonito". Willian Morris</p>
                 </div>
     
-                <div class="block-title">Navigation</div>
+                <div class="block-title">Portfólio</div>
                 <div class="list">
-                  <ul>
+                  <!-- <ul>
                     <li>
                       <a href="/about/" class="item-content item-link">
                         <div class="item-inner">
@@ -158,10 +161,23 @@
                         </div>
                       </a>
                     </li>
-                  </ul>
-                </div>
+                  </ul> -->    <!-- BOTÃO ABOUT DO INDEX BOTÃO ABOUT DO INDEX BOTÃO ABOUT DO INDEX -->
+                  <p>
+                    <div class="swiper-container swiper-init demo-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/esporte.jpg" alt="bike esporte"></div>
+                        <div class="swiper-slide"><img src="img/passeio.jpg" alt="bike passeio"></div>
+                        <div class="swiper-slide"><img src="img/retro.jpg" alt="bike retro"></div>
+                      </div>
+                    </div>
+
+                    <div class="page-content">
+                      <p>Conheça mais sobre nosso portfólio</p>
+                      <a href="/portfolio/" class="col button button-big button-fill button-raised">Portfólio</a>
+                    </div>  
+                  </div>
     
-                <div class="block-title">Modals</div>
+                <!-- <div class="block-title">Modals</div>
                 <div class="block block-strong">
                   <div class="row">
                     <div class="col-50">
@@ -171,9 +187,9 @@
                       <a href="#" class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Login Screen</a>
                     </div>
                   </div>
-                </div>
+                </div> -->
     
-                <div class="block-title">Panels</div>
+                <!-- <div class="block-title">Panels</div>
                 <div class="block block-strong">
                   <div class="row">
                     <div class="col-50">
@@ -183,9 +199,9 @@
                       <a href="#" class="button button-raised button-fill panel-open" data-panel="right">Right Panel</a>
                     </div>
                   </div>
-                </div>
+                </div> -->
     
-                <div class="block-title searchbar-hide-on-search">Page Loaders & Router</div>
+                <!-- <div class="block-title searchbar-hide-on-search">Page Loaders & Router</div>
                 <div class="list links-list searchbar-hide-on-search">
                   <ul>
                     <li>
@@ -201,7 +217,7 @@
                       <a href="/request-and-load/user/123456/">Request Data & Load</a>
                     </li>
                   </ul>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -242,8 +258,16 @@
         <div class="login-screen" id="my-login-screen">
           <div class="view">
             <div class="page">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                      <div class="title">Login</div>
+                      <div class="right">
+                        <a href="#" data-login-screen="#my-login-screen" class="login-screen-close"><i class="f7-icons">close_round</i></a>
+                      </div>
+                    </div>
+                  </div>
               <div class="page-content login-screen-content">
-                <div class="login-screen-title">Login</div>
+                <div class="login-screen-title"></div>
                 <div class="list">
                   <ul>
                     <li class="item-content item-input">
