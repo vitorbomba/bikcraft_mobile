@@ -57,13 +57,32 @@ var settingsView = app.views.create('#view-settings', {
 
 
 // Login Screen Demo
-$$('#my-login-screen .login-button').on('click', function () {
-  var username = $$('#my-login-screen [name="username"]').val();
-  var password = $$('#my-login-screen [name="password"]').val();
+$$('#my-login-screen .Cadastrar').on('click', function () {
+  var username = $$('#my-login-screen [name="email"]').val();
+  var password = $$('#my-login-screen [name="senha"]').val();
+
+//Alert username and password
+  app.dialog.alert('Email: ' + username + '<br>Senha: ' + password);
+
+firebase 
+  .auth()
+  .createUserWithEmailAndPassword(username,password)
+  .then( function () {
+    app.dialog.alert('Bem Vindo: ' + username);
+    this.$$('.toolbar-inner').text('Bem Vindo ' + username);
+
+  })
+  .catch( function(error){
+    console.error(error.code)
+    console.error(error.message)
+    app.dialog.alert('Falha ao cadastrar, verifique o erro no console');
+  //  this.$$('.toolbar-inner').innerHtml = 'Bem Vindo ' + username;
+  })
 
   // Close login screen
   app.loginScreen.close('#my-login-screen');
 
-  // Alert username and password
-  app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
 });
+
+  // Alert username and password
+  //app.dialog.alert('Email: ' + username + '<br>Senha: ' + password);

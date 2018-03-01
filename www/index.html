@@ -10,7 +10,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://google.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 
     <!-- Required meta tags-->
     <meta charset="utf-8">
@@ -57,7 +57,7 @@
                 <div class="list links-list">
                     <ul>
                         <li>
-                          <a href="#" class="login-screen-open" data-login-screen="#my-login-screen">Login</a>
+                          <a href="#" class="login-screen-open panel-close" data-login-screen="#my-login-screen">Login</a>
                         </li>
                         <li>
                             <a href="/sobre/" data-view=".view-main" class="panel-close">Sobre</a>
@@ -272,17 +272,17 @@
                   <ul>
                     <li class="item-content item-input">
                       <div class="item-inner">
-                        <div class="item-title item-label">Username</div>
+                        <div class="item-title item-label">E-mail</div>
                         <div class="item-input-wrap">
-                          <input type="text" name="username" placeholder="Your username">
+                          <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
                         </div>
                       </div>
                     </li>
                     <li class="item-content item-input">
                       <div class="item-inner">
-                        <div class="item-title item-label">Password</div>
+                        <div class="item-title item-label">Senha</div>
                         <div class="item-input-wrap">
-                          <input type="password" name="password" placeholder="Your password">
+                          <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
                         </div>
                       </div>
                     </li>
@@ -291,7 +291,13 @@
                 <div class="list">
                   <ul>
                     <li>
-                      <a href="#" class="item-link list-button login-button">Sign In</a>
+                      <a href="#" class="item-link list-button login-button Cadastrar" id="cadastrar">Cadastrar</a>
+                    </li>
+                    <li>
+                      <a href="#" class="item-link list-button login-button Logar" id="logar">Logar</a>
+                    </li>
+                    <li>
+                      <a href="#" class="item-link list-button login-button Deslogar" id="deslogar">Deslogar</a>
                     </li>
                   </ul>
                   <div class="block-footer">Some text about login information.<br>Click "Sign In" to close Login Screen</div>
@@ -309,9 +315,13 @@
       <script src="js/routes.js"></script>
     
       <!-- Your custom app scripts -->
+      <script src="js/firebase.js"></script>
+      <!-- <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script> -->
+      <script src="js/firebaseapp.js"></script>
       <script src="js/app.js"></script>
-      <!-- Cordova app scripts -->
-      <script type="text/javascript" src="cordova.js"></script>
+
+
+      <!-- <script type="text/javascript" src="cordova.js"></script> -->
 
 <!--     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script> -->
